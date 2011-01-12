@@ -42,6 +42,7 @@ bench.dirs: $(addsuffix .bench, $(BENCH))
 	+cd $* && $(QUOTED_GOBIN)/gomake clean
 
 %.install:
+	+cd libutp && make
 	+cd $* && $(QUOTED_GOBIN)/gomake install
 
 %.nuke:
